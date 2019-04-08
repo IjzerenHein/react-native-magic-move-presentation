@@ -1,0 +1,28 @@
+{
+  "name": "magicmovepresentation",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "ios": "react-native run-ios --simulator=\"iPad Air 2\""
+  },
+  "dependencies": {
+    "@react-native-community/status-bar": "^1.0.3",
+    "react": "16.8.3",
+    "react-native": "0.59.3",
+    "react-native-magic-move": "^0.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "babel-jest": "^24.7.1",
+    "flow-bin": "0.92.0",
+    "jest": "^24.7.1",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

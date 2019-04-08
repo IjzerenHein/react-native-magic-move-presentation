@@ -1,0 +1,5 @@
+rootProject.name = 'magicmovepresentation'
+include ':@react-native-community_status-bar'
+project(':@react-native-community_status-bar').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/status-bar/android')
+
+include ':app'

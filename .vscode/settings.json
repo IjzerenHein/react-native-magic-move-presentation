@@ -1,0 +1,10 @@
+{
+  "flow.useNPMPackagedFlow": true,
+  "javascript.validate.enable": false,
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#e1eef7",
+    "titleBar.inactiveBackground": "#e1eef799",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99"
+  }
+}
