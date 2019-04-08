@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from "react";
 import { MasterSlide } from "./MasterSlide";
+import * as MagicMove from "react-native-magic-move";
 
 interface PropsType {
   title?: string;
@@ -8,6 +9,10 @@ interface PropsType {
 
 export class Slide extends Component<PropsType> {
   render() {
-    return <MasterSlide {...this.props} />;
+    return (
+      <MagicMove.Scene>
+        <MasterSlide {...this.props} />
+      </MagicMove.Scene>
+    );
   }
 }

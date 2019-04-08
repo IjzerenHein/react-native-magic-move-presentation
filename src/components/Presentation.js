@@ -1,18 +1,24 @@
 // @flow
 import React, { Component } from "react";
-import { View, StyleSheet, TextInput } from "react-native";
+import { View, StyleSheet, TouchableWithoutFeedback } from "react-native";
 import { MasterSlide } from "./MasterSlide";
+import { Transition } from "./Transition";
 import StatusBar from "@react-native-community/status-bar";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  textInput: {
-    // nop
-  },
   slide: {
-    ...StyleSheet.absoluteFillObject
+    flex: 1
+  },
+  navContainer: {
+    ...StyleSheet.absoluteFillObject,
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  navButton: {
+    width: 100
   }
 });
 
@@ -35,14 +41,34 @@ export class Presentation extends Component<PropsType, StateType> {
     return (
       <View style={styles.container}>
         <StatusBar hidden />
-        <TextInput style={styles.textInput} onKeyPress={this.onKeyPress} />
-        <View style={styles.slide}>{slide}</View>
+        <Transition style={styles.slide}>{slide}</Transition>
+        <View style={styles.navContainer}>
+          <TouchableWithoutFeedback onPress={this.onPressPrev}>
+            <View style={styles.navButton} />
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback onPress={this.onPressNext}>
+            <View style={styles.navButton} />
+          </TouchableWithoutFeedback>
+        </View>
       </View>
     );
   }
 
-  onKeyPress = event => {
-    // TODO
-    console.log("onKeyPress:", event.nativeEvent.key);
+  onPressPrev = () => {
+    const { slideIndex } = this.state;
+    if (slideIndex > 0) {
+      this.setState({
+        slideIndex: slideIndex - 1
+      });
+    }
+  };
+
+  onPressNext = () => {
+    const { slideIndex } = this.state;
+    if (slideIndex < React.Children.count(this.props.children) - 1) {
+      this.setState({
+        slideIndex: slideIndex + 1
+      });
+    }
   };
 }
