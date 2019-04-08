@@ -3,6 +3,8 @@ import React from "react";
 import { Text, StyleSheet } from "react-native";
 import { Colors } from "../styles";
 import * as MagicMove from "react-native-magic-move";
+import * as Animatable from "react-native-animatable";
+import { TransitionProps } from "./Animation";
 
 const baseFont = {
   // TODO
@@ -12,6 +14,10 @@ const styles = StyleSheet.create({
   heading1: {
     ...baseFont,
     fontSize: 60
+  },
+  heading2: {
+    ...baseFont,
+    fontSize: 40
   },
   heading3: {
     ...baseFont,
@@ -25,43 +31,36 @@ const styles = StyleSheet.create({
 });
 
 export interface TextProps extends Text.propTypes {
+  id?: string;
   light?: boolean;
   margins?: boolean;
   color?: string;
 }
 
-export const Heading1 = (props: TextProps) => {
-  const { children, style, color, margins, ...otherProps } = props;
-  return (
-    <MagicMove.Text
-      style={[styles.heading1, color ? { color } : undefined, style]}
-      {...otherProps}
-    >
-      {children}
-    </MagicMove.Text>
-  );
-};
+function createTextComponent(baseStyle: any) {
+  return (props: TextProps) => {
+    const { children, id, style, color, margins, ...otherProps } = props;
 
-export const Heading3 = (props: TextProps) => {
-  const { children, style, color, margins, ...otherProps } = props;
-  return (
-    <MagicMove.Text
-      style={[styles.heading3, color ? { color } : undefined, style]}
-      {...otherProps}
-    >
-      {children}
-    </MagicMove.Text>
-  );
-};
+    const fullStyle = [baseStyle, color ? { color } : undefined, style];
 
-export const Caption = (props: TextProps) => {
-  const { children, style, color, margins, ...otherProps } = props;
-  return (
-    <MagicMove.Text
-      style={[styles.caption, color ? { color } : undefined, style]}
-      {...otherProps}
-    >
-      {children}
-    </MagicMove.Text>
-  );
-};
+    return id ? (
+      <MagicMove.Text
+        id={id}
+        style={fullStyle}
+        {...TransitionProps}
+        {...otherProps}
+      >
+        {children}
+      </MagicMove.Text>
+    ) : (
+      <Animatable.Text style={fullStyle} {...otherProps}>
+        {children}
+      </Animatable.Text>
+    );
+  };
+}
+
+export const Heading1 = createTextComponent(styles.heading1);
+export const Heading2 = createTextComponent(styles.heading2);
+export const Heading3 = createTextComponent(styles.heading3);
+export const Caption = createTextComponent(styles.caption);

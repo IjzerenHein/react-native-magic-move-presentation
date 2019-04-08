@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
 import { Heading3 } from "./Text";
 import { Colors } from "../styles";
+import * as MagicMove from "react-native-magic-move";
+import { TransitionProps } from "./Animation";
 
 const styles = StyleSheet.create({
   container: {
@@ -26,13 +28,16 @@ const styles = StyleSheet.create({
 interface PropsType {
   children: any;
   hideHeader?: boolean;
+  style: any;
+  id?: string;
 }
 
 export class MasterSlide extends Component<PropsType> {
   render() {
-    const { children, hideHeader } = this.props;
-    return (
-      <View style={styles.container}>
+    const { children, style, hideHeader, id } = this.props;
+
+    const content = (
+      <React.Fragment>
         {children}
         {!hideHeader ? (
           <View style={styles.header}>
@@ -44,7 +49,19 @@ export class MasterSlide extends Component<PropsType> {
         ) : (
           undefined
         )}
-      </View>
+      </React.Fragment>
+    );
+
+    return id ? (
+      <MagicMove.View
+        style={[styles.container, style]}
+        id={id}
+        {...TransitionProps}
+      >
+        {content}
+      </MagicMove.View>
+    ) : (
+      <View style={[styles.container, style]}>{content}</View>
     );
   }
 }

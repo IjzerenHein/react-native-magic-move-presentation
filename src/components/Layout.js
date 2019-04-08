@@ -23,10 +23,10 @@ const styles = StyleSheet.create({
 
 export const Column = (props: PropsType) => {
   const { style, ...otherProps } = props;
-  return <View style={[styles.column, style]} {...props} />;
+  return <View style={[styles.column, style]} {...otherProps} />;
 };
 
 export const Row = (props: PropsType) => {
   const { style, ...otherProps } = props;
-  return <View style={[styles.row, style]} {...props} />;
+  return <View style={[styles.row, style]} {...otherProps} />;
 };

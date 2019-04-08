@@ -40,6 +40,7 @@
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		8B1CE22379774A9FB40F2667 /* libRNCStatusBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A080A95ACE4127BB6EF9EC /* libRNCStatusBar.a */; };
+		4AB921724F7C43919D8303A2 /* libRNMagicMove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5469FF3C0834977BA8FE36A /* libRNMagicMove.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,6 +350,8 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		9760F08C55D94B6BA56D4DD8 /* RNCStatusBar.xcodeproj */ = {isa = PBXFileReference; name = "RNCStatusBar.xcodeproj"; path = "../node_modules/@react-native-community/status-bar/ios/RNCStatusBar.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		C7A080A95ACE4127BB6EF9EC /* libRNCStatusBar.a */ = {isa = PBXFileReference; name = "libRNCStatusBar.a"; path = "libRNCStatusBar.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CF43E2F4107B451CB1893F3A /* RNMagicMove.xcodeproj */ = {isa = PBXFileReference; name = "RNMagicMove.xcodeproj"; path = "../node_modules/react-native-magic-move/ios/RNMagicMove.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C5469FF3C0834977BA8FE36A /* libRNMagicMove.a */ = {isa = PBXFileReference; name = "libRNMagicMove.a"; path = "libRNMagicMove.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +381,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				8B1CE22379774A9FB40F2667 /* libRNCStatusBar.a in Frameworks */,
+				4AB921724F7C43919D8303A2 /* libRNMagicMove.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +572,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				9760F08C55D94B6BA56D4DD8 /* RNCStatusBar.xcodeproj */,
+				CF43E2F4107B451CB1893F3A /* RNMagicMove.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1197,10 +1202,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/status-bar/ios",
+					"$(SRCROOT)/../node_modules/react-native-magic-move/ios",
 				);
 			};
 			name = Debug;
@@ -1223,10 +1230,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/status-bar/ios",
+					"$(SRCROOT)/../node_modules/react-native-magic-move/ios",
 				);
 			};
 			name = Release;
@@ -1251,6 +1260,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/status-bar/ios",
+					"$(SRCROOT)/../node_modules/react-native-magic-move/ios",
 				);
 			};
 			name = Debug;
@@ -1274,6 +1284,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/status-bar/ios",
+					"$(SRCROOT)/../node_modules/react-native-magic-move/ios",
 				);
 			};
 			name = Release;
@@ -1304,10 +1315,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/status-bar/ios",
+					"$(SRCROOT)/../node_modules/react-native-magic-move/ios",
 				);
 			};
 			name = Debug;
@@ -1338,10 +1351,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/status-bar/ios",
+					"$(SRCROOT)/../node_modules/react-native-magic-move/ios",
 				);
 			};
 			name = Release;
@@ -1371,10 +1386,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/status-bar/ios",
+					"$(SRCROOT)/../node_modules/react-native-magic-move/ios",
 				);
 			};
 			name = Debug;
@@ -1404,10 +1421,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/@react-native-community/status-bar/ios",
+					"$(SRCROOT)/../node_modules/react-native-magic-move/ios",
 				);
 			};
 			name = Release;
