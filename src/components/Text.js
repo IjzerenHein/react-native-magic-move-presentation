@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
 import { Text, StyleSheet } from "react-native";
+import { Colors } from "../styles";
 import * as MagicMove from "react-native-magic-move";
 
 const baseFont = {
@@ -10,14 +11,16 @@ const baseFont = {
 const styles = StyleSheet.create({
   heading1: {
     ...baseFont,
-    fontSize: 60,
-    textAlign: "center"
+    fontSize: 60
+  },
+  heading3: {
+    ...baseFont,
+    fontSize: 30
   },
   caption: {
     ...baseFont,
     fontSize: 28,
-    color: "#808080",
-    textAlign: "center"
+    color: Colors.gray
   }
 });
 
@@ -32,6 +35,18 @@ export const Heading1 = (props: TextProps) => {
   return (
     <MagicMove.Text
       style={[styles.heading1, color ? { color } : undefined, style]}
+      {...otherProps}
+    >
+      {children}
+    </MagicMove.Text>
+  );
+};
+
+export const Heading3 = (props: TextProps) => {
+  const { children, style, color, margins, ...otherProps } = props;
+  return (
+    <MagicMove.Text
+      style={[styles.heading3, color ? { color } : undefined, style]}
       {...otherProps}
     >
       {children}

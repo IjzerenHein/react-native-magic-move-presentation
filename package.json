@@ -11,7 +11,7 @@
     "@react-native-community/status-bar": "^1.0.3",
     "react": "16.8.3",
     "react-native": "0.59.3",
-    "react-native-magic-move": "^0.6.1"
+    "react-native-magic-move": "file:.yalc/react-native-magic-move"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
