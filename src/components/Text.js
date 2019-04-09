@@ -39,24 +39,46 @@ export interface TextProps extends Text.propTypes {
 
 function createTextComponent(baseStyle: any) {
   return (props: TextProps) => {
-    const { children, id, style, color, margins, ...otherProps } = props;
+    const {
+      children,
+      id,
+      animation,
+      style,
+      color,
+      margins,
+      ...otherProps
+    } = props;
 
     const fullStyle = [baseStyle, color ? { color } : undefined, style];
 
-    return id ? (
-      <MagicMove.Text
-        id={id}
-        style={fullStyle}
-        {...TransitionProps}
-        {...otherProps}
-      >
-        {children}
-      </MagicMove.Text>
-    ) : (
-      <Animatable.Text style={fullStyle} {...otherProps}>
-        {children}
-      </Animatable.Text>
-    );
+    if (id) {
+      return (
+        <MagicMove.Text
+          id={id}
+          style={fullStyle}
+          {...TransitionProps}
+          {...otherProps}
+        >
+          {children}
+        </MagicMove.Text>
+      );
+    } else if (animation) {
+      return (
+        <Animatable.Text
+          style={fullStyle}
+          animation={animation}
+          {...otherProps}
+        >
+          {children}
+        </Animatable.Text>
+      );
+    } else {
+      return (
+        <Text style={fullStyle} {...otherProps}>
+          {children}
+        </Text>
+      );
+    }
   };
 }
 

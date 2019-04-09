@@ -67,7 +67,7 @@ export class Transition extends Component<PropsType, StateType> {
   }
 
   onTransitionEnd = (key: string) => {
-    console.log("onTransitionEnd: ", key);
+    // console.log("onTransitionEnd: ", key);
     if (this.state.prevChildren.length) {
       this.setState({
         prevChildren: []
