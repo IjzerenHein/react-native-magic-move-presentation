@@ -138,6 +138,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-video')
     implementation project(':react-native-magic-move')
     implementation project(':@react-native-community_status-bar')
     implementation fileTree(dir: "libs", include: ["*.jar"])
