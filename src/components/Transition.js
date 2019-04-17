@@ -47,7 +47,7 @@ export class Transition extends Component<PropsType, StateType> {
   render() {
     const { style, ...otherProps } = this.props;
     const { child, prevChildren } = this.state;
-    const children = child ? [...prevChildren, child] : prevChildren;
+    const children = child ? [child, ...prevChildren] : prevChildren;
     return (
       <View style={style} {...otherProps}>
         {React.Children.map(children, child => {

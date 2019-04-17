@@ -43,6 +43,6 @@ export class TransitionView extends Component<PropsType, StateType> {
       if (this._mounted && onTransitionEnd) {
         onTransitionEnd(child.key);
       }
-    }, this.props.duration || 1000);
+    }, this.props.duration || 100);
   }
 }
