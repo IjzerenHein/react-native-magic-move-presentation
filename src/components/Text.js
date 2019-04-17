@@ -5,6 +5,10 @@ import { Colors } from "../styles";
 import * as MagicMove from "react-native-magic-move";
 import * as Animatable from "react-native-animatable";
 import { TransitionProps } from "./Animation";
+import SyntaxHighlighter from "react-native-syntax-highlighter";
+import { dark } from "react-syntax-highlighter/styles/prism";
+
+// import dark from "react-syntax-highlighter/dist/styles/prism/dark";
 
 const baseFont = {
   // TODO
@@ -23,10 +27,20 @@ const styles = StyleSheet.create({
     ...baseFont,
     fontSize: 30
   },
+  body: {
+    ...baseFont,
+    fontSize: 20
+  },
   caption: {
     ...baseFont,
     fontSize: 28,
     color: Colors.gray
+  },
+  code: {
+    fontFamily: "Courier New",
+    fontSize: 30,
+    fontWeight: "bold",
+    color: Colors.white
   }
 });
 
@@ -49,7 +63,12 @@ function createTextComponent(baseStyle: any) {
       ...otherProps
     } = props;
 
-    const fullStyle = [baseStyle, color ? { color } : undefined, style];
+    const fullStyle = [
+      baseStyle,
+      color ? { color } : undefined,
+      margins ? { marginBottom: 40 } : undefined,
+      style
+    ];
 
     if (id) {
       return (
@@ -59,7 +78,7 @@ function createTextComponent(baseStyle: any) {
           {...TransitionProps}
           {...otherProps}
         >
-          {children}
+          {children || " "}
         </MagicMove.Text>
       );
     } else if (animation) {
@@ -69,13 +88,13 @@ function createTextComponent(baseStyle: any) {
           animation={animation}
           {...otherProps}
         >
-          {children}
+          {children || " "}
         </Animatable.Text>
       );
     } else {
       return (
         <Text style={fullStyle} {...otherProps}>
-          {children}
+          {children || " "}
         </Text>
       );
     }
@@ -85,4 +104,14 @@ function createTextComponent(baseStyle: any) {
 export const Heading1 = createTextComponent(styles.heading1);
 export const Heading2 = createTextComponent(styles.heading2);
 export const Heading3 = createTextComponent(styles.heading3);
+export const Body = createTextComponent(styles.body);
 export const Caption = createTextComponent(styles.caption);
+
+export const Code = (props: any) => (
+  <SyntaxHighlighter
+    language="javascript"
+    {...props}
+    customStyle={{ backgroundColor: Colors.white }}
+    fontSize={28}
+  />
+);

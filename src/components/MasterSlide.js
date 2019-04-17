@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    padding: 20
   },
   header: {
     position: "absolute",
@@ -27,24 +28,35 @@ const styles = StyleSheet.create({
 
 interface PropsType {
   children: any;
-  hideHeader?: boolean;
+  showHeader?: boolean;
+  enabled?: boolean;
   style: any;
   id?: string;
 }
 
 export class MasterSlide extends Component<PropsType> {
   render() {
-    const { children, style, hideHeader, id } = this.props;
+    const { children, style, showHeader, id, enabled } = this.props;
 
     const content = (
       <React.Fragment>
         {children}
-        {!hideHeader ? (
+        {showHeader ? (
           <View style={styles.header}>
-            <Heading3 id="presentation-title" color={Colors.gray}>
+            <Heading3
+              id="presentation-title"
+              color={Colors.gray}
+              disabled={!enabled}
+            >
               react-native-magic-move
             </Heading3>
-            <Heading3 id="presentation-subtitle">🐰🎩✨</Heading3>
+            <Heading3
+              id="presentation-subtitle"
+              disabled={!enabled}
+              transition={MagicMove.Transition.shrinkAndGrow}
+            >
+              🐰🎩✨
+            </Heading3>
           </View>
         ) : (
           undefined

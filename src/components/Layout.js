@@ -18,6 +18,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center"
+  },
+  flex: {
+    flex: 1
+  },
+  list: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start"
   }
 });
 
@@ -29,4 +37,14 @@ export const Column = (props: PropsType) => {
 export const Row = (props: PropsType) => {
   const { style, ...otherProps } = props;
   return <View style={[styles.row, style]} {...otherProps} />;
+};
+
+export const Flex = (props: PropsType) => {
+  const { style, ...otherProps } = props;
+  return <View style={[styles.flex, style]} {...otherProps} />;
+};
+
+export const List = (props: PropsType) => {
+  const { style, ...otherProps } = props;
+  return <View style={[styles.list, style]} {...otherProps} />;
 };
