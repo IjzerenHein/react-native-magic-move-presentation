@@ -46,6 +46,16 @@ export default [
     <Slide2 highlight />
     <DummySlide />
   </SlideZoomContainer>,
+  <SlideZoomContainer key={"how11.1"} title="Hide clone">
+    <Slide1 />
+    <Slide2 highlight hidden />
+    <DummySlide />
+  </SlideZoomContainer>,
+  <SlideZoomContainer key={"how11.2"} title="Show target">
+    <Slide1 />
+    <Slide2 />
+    <DummySlide />
+  </SlideZoomContainer>,
   <SlideContainer key={"how12"}>
     <Slide1 imageEnabled />
   </SlideContainer>,
@@ -149,6 +159,12 @@ import * as MagicMove from 'react-native-magic-move';
   <SlideContainer key={"how19"}>
     <Slide2 imageEnabled titleEnabled debug />
   </SlideContainer>,
+  <SlideContainer key={"how21"}>
+    <Slide1 imageEnabled titleEnabled textEnabled />
+  </SlideContainer>,
+  <SlideContainer key={"how22"}>
+    <Slide2 imageEnabled titleEnabled textEnabled />
+  </SlideContainer>,
   <Slide key={"how20"}>
     <Code>{`
 
@@ -172,11 +188,5 @@ import * as Animatable from 'react-native-animatable';
 </Animatable.Text>
 
 `}</Code>
-  </Slide>,
-  <SlideContainer key={"how21"}>
-    <Slide1 imageEnabled titleEnabled textEnabled />
-  </SlideContainer>,
-  <SlideContainer key={"how22"}>
-    <Slide2 imageEnabled titleEnabled textEnabled />
-  </SlideContainer>
+  </Slide>
 ];
