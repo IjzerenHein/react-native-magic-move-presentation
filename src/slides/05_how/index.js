@@ -10,7 +10,7 @@ import {
 import { Slide, Code } from "../../components";
 
 export default [
-  /*<SlideContainer key={"how1"}>
+  <SlideContainer key={"how1"}>
     <Slide1 imageEnabled titleEnabled textEnabled />
   </SlideContainer>,
   <SlideContainer key={"how2"}>
@@ -45,7 +45,7 @@ export default [
     <Slide1 highlight />
     <Slide2 highlight />
     <DummySlide />
-  </SlideZoomContainer>,*/
+  </SlideZoomContainer>,
   <SlideContainer key={"how12"}>
     <Slide1 imageEnabled />
   </SlideContainer>,

@@ -5,6 +5,7 @@ import {
   Heading1,
   Heading2,
   Column,
+  List,
   Row,
   Flex,
   MagicMove,
@@ -40,5 +41,12 @@ export default [
         <Heading1 animation="zoomIn">Delight</Heading1>
       </Column>
     </Row>
+  </Slide>,
+  <Slide key="why3">
+    <Heading1 margins>Difficulties</Heading1>
+    <List>
+      <Heading2 margins>💃 Router & view interplay</Heading2>
+      <Heading2 margins>🤯 Keep sanity writing views</Heading2>
+    </List>
   </Slide>
 ];

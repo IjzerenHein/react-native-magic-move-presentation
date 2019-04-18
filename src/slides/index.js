@@ -11,12 +11,12 @@ import imageSlides from "./08_ImageSlides";
 import finalSlides from "./09_FinalSlides";
 
 export default [
-  /*<StartSlide key={0} />,
+  <StartSlide key={0} />,
   <MeSlide key={1} />,
   ...whatSlides,
   ...whySlides,
   ...libSlides,
-  ...howSlides,*/
+  ...howSlides,
   ...imageSlides,
   ...finalSlides
 ];
