@@ -116,7 +116,11 @@ export const DummySlide = (props: any) => <ZoomedSlide id="dummy" {...props} />;
 
 export const Slide1 = (props: any) => (
   <ZoomedSlide {...props} id="howslide1">
-    <Heading1 margins id={props.titleEnabled ? "relativityTitle" : undefined}>
+    <Heading1
+      margins
+      id={props.titleEnabled ? "relativityTitle" : undefined}
+      debug={props.debug}
+    >
       Relativity
     </Heading1>
     <View style={{ width: 500, height: 500 }}>
@@ -127,6 +131,7 @@ export const Slide1 = (props: any) => (
         source={require("../../assets/relativity.jpg")}
         style={{ width: 500, height: 500, opacity: props.hidden ? 0 : 1 }}
         resizeMode="contain"
+        debug={props.debug}
       />
       <View
         style={[
@@ -148,6 +153,7 @@ export const Slide2 = (props: any) => (
           style={{ width: 200, height: 200, opacity: props.hidden ? 0 : 1 }}
           resizeMode="contain"
           zIndex={props.imageEnabled ? 10 : undefined}
+          debug={props.debug}
         />
         <View
           style={[
@@ -157,7 +163,10 @@ export const Slide2 = (props: any) => (
         />
       </View>
       <Column style={{ marginLeft: 40, alignItems: "flex-start" }}>
-        <Heading2 id={props.titleEnabled ? "relativityTitle" : undefined}>
+        <Heading2
+          id={props.titleEnabled ? "relativityTitle" : undefined}
+          debug={props.debug}
+        >
           Relativity
         </Heading2>
         <Caption margins animation={props.textEnabled ? "fadeInUp" : undefined}>
