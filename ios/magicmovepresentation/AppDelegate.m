@@ -11,6 +11,8 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+#import "KeyEventModule.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -37,6 +39,24 @@
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
+}
+
+- (NSArray *)keyCommands
+{
+  return @[ [UIKeyCommand keyCommandWithInput:UIKeyInputRightArrow modifierFlags:0 action:@selector(rightPressed)],
+            [UIKeyCommand keyCommandWithInput:UIKeyInputLeftArrow modifierFlags:0 action:@selector(leftPressed)]];
+}
+
+- (void)rightPressed
+{
+  [KeyEventModule keyEvent:@"RightArrow"];
+  // NSLog(@"Enter pressed");
+}
+
+- (void)leftPressed
+{
+  [KeyEventModule keyEvent:@"LeftArrow"];
+  // NSLog(@"Enter pressed");
 }
 
 @end

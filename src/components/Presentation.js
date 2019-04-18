@@ -1,6 +1,12 @@
 // @flow
 import React, { Component } from "react";
-import { View, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import {
+  View,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  NativeEventEmitter,
+  NativeModules
+} from "react-native";
 import { MasterSlide } from "./MasterSlide";
 import { Transition } from "./Transition";
 import StatusBar from "@react-native-community/status-bar";
@@ -33,6 +39,22 @@ export class Presentation extends Component<PropsType, StateType> {
   state = {
     slideIndex: 0
   };
+
+  componentDidMount() {
+    const keyEventEmitter = new NativeEventEmitter(
+      NativeModules.KeyEventModule
+    );
+    keyEventEmitter.addListener("keyEvent", event => {
+      switch (event) {
+        case "LeftArrow":
+          this.onPressPrev();
+          break;
+        case "RightArrow":
+          this.onPressNext();
+          break;
+      }
+    });
+  }
 
   render() {
     const { children } = this.props;
