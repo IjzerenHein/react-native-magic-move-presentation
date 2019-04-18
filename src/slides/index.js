@@ -6,7 +6,6 @@ import whatSlides from "./02_WhatSlides";
 import whySlides from "./03_WhySlides";
 import libSlides from "./04_LibSlides";
 import howSlides from "./05_how";
-// import apiSlides from "./06_APISlides";
 import imageSlides from "./08_ImageSlides";
 import finalSlides from "./09_FinalSlides";
 

@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { Slide, Heading1, Heading2, List } from "../components";
+import { Slide, Heading1, Heading2, List, Image } from "../components";
 
 export default [
   <Slide key="lib1">
@@ -11,5 +11,9 @@ export default [
       <Heading2 margins>✨ react-navigation</Heading2>
       <Heading2 margins>🏎️ native optimisations</Heading2>
     </List>
+  </Slide>,
+  <Slide key="lib2">
+    <Heading1 margins>Disclaimer!</Heading1>
+    <Image source={require("../assets/break.gif")} />
   </Slide>
 ];

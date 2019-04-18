@@ -132,6 +132,7 @@ export const Slide1 = (props: any) => (
         style={{ width: 500, height: 500, opacity: props.hidden ? 0 : 1 }}
         resizeMode="contain"
         debug={props.debug}
+        transition={props.imageTransition}
       />
       <View
         style={[
@@ -154,6 +155,7 @@ export const Slide2 = (props: any) => (
           resizeMode="contain"
           zIndex={props.imageEnabled ? 10 : undefined}
           debug={props.debug}
+          transition={props.imageTransition}
         />
         <View
           style={[

@@ -7,7 +7,7 @@ import {
   Slide2,
   DummySlide
 } from "./components";
-import { Slide, Code } from "../../components";
+import { Slide, Code, MagicMove } from "../../components";
 
 export default [
   <SlideContainer key={"how1"}>
@@ -59,14 +59,15 @@ import * as MagicMove from 'react-native-magic-move';
 
 
 
-// Wrap app with magic-move provider
+// Wrap App in <MagicMove.Provider>
+// Provider draws overlay on top of your app
 <MagicMove.Provider>
   <App />
 </MagicMove.Provider>
 
 
-
-// Wrap your screen into a scene
+// Wrap your screen in <MagicMove.Scene>
+// Trigger transitions and measure relative position
 <MagicMove.Scene>
   <View>
     ...
@@ -142,7 +143,7 @@ import * as MagicMove from 'react-native-magic-move';
 
 `}</Code>
   </Slide>,
-  <SlideContainer key={"how18"}>
+  <SlideContainer key={"how18.3"}>
     <Slide1 imageEnabled titleEnabled debug />
   </SlideContainer>,
   <SlideContainer key={"how19"}>

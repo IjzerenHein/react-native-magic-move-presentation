@@ -23,13 +23,15 @@ export default [
     <Heading1 animation="fadeIn">Shared element transition</Heading1>
   </Slide>,
   <Slide key="what2">
-    <Video
-      source={require("../assets/ContactsAnim.mp4")}
-      repeat
-      style={{ width: 400, height: 600 }}
-    />
-  </Slide>,
-  <Slide key="what3">
+    <MagicMove.View id="video1">
+      <Video
+        source={require("../assets/ContactsAnim.mp4")}
+        repeat
+        style={{ width: 400, height: 600 }}
+      />
+    </MagicMove.View>
+  </Slide>
+  /*<Slide key="what3">
     <MagicMove.View id="video1">
       <Video
         source={require("../assets/ContactsAnim.mp4")}
@@ -38,5 +40,5 @@ export default [
         style={{ width: 400, height: 600 }}
       />
     </MagicMove.View>
-  </Slide>
+  </Slide>*/
 ];

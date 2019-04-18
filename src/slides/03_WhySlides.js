@@ -38,12 +38,28 @@ export default [
       <Column>
         <Heading1 id="meaning">Contextual meaning</Heading1>
         <Heading1 />
-        <Heading1 animation="zoomIn">Delight</Heading1>
+        <Heading1 id="delight">Delight</Heading1>
       </Column>
     </Row>
   </Slide>,
   <Slide key="why3">
-    <Heading1 margins>Difficulties</Heading1>
+    <Row>
+      <Video
+        source={require("../assets/ContactsAnim.mp4")}
+        repeat
+        style={{ width: 400, height: 600 }}
+      />
+      <Column>
+        <Heading1 id="meaning">Contextual meaning</Heading1>
+        <Heading1 />
+        <Heading1 id="delight">Delight</Heading1>
+        <Heading1 />
+        <Heading1>Speed</Heading1>
+      </Column>
+    </Row>
+  </Slide>,
+  <Slide key="why4">
+    <Heading1 margins>But, it's hard to do</Heading1>
     <List>
       <Heading2 margins>💃 Router & view interplay</Heading2>
       <Heading2 margins>🤯 Keep sanity writing views</Heading2>
