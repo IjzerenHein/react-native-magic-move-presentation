@@ -38,7 +38,7 @@ export default [
       <Column>
         <Heading1 id="meaning">Contextual meaning</Heading1>
         <Heading1 />
-        <Heading1 id="delight">Delight</Heading1>
+        <Heading1 id="delight">Delightful</Heading1>
       </Column>
     </Row>
   </Slide>,
@@ -52,9 +52,9 @@ export default [
       <Column>
         <Heading1 id="meaning">Contextual meaning</Heading1>
         <Heading1 />
-        <Heading1 id="delight">Delight</Heading1>
+        <Heading1 id="delight">Delightful</Heading1>
         <Heading1 />
-        <Heading1>Speed</Heading1>
+        <Heading1>Sense of activity</Heading1>
       </Column>
     </Row>
   </Slide>,
