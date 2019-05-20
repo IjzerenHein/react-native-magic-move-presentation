@@ -114,6 +114,38 @@ export const ZoomedSlide = (props: any) => {
 
 export const DummySlide = (props: any) => <ZoomedSlide id="dummy" {...props} />;
 
+const Highlight = (props: any) => {
+  if (!props.highlight) return null;
+  let color = Colors.green;
+  switch (props.highlight) {
+    case "clone":
+      color = Colors.yellow;
+      break;
+    case "measure":
+      return (
+        <View
+          style={[
+            StyleSheet.absoluteFill,
+            {
+              borderStyle: "dashed",
+              borderWidth: 10,
+              borderColor: Colors.red,
+              backgroundColor: "#FFFFFFb0"
+            }
+          ]}
+        />
+      );
+  }
+  return (
+    <View
+      style={[
+        StyleSheet.absoluteFill,
+        { backgroundColor: color, opacity: 0.7 }
+      ]}
+    />
+  );
+};
+
 export const Slide1 = (props: any) => (
   <ZoomedSlide {...props} id="howslide1">
     <Heading1
@@ -134,12 +166,7 @@ export const Slide1 = (props: any) => (
         debug={props.debug}
         transition={props.imageTransition}
       />
-      <View
-        style={[
-          StyleSheet.absoluteFill,
-          props.highlight ? { backgroundColor: Colors.green } : undefined
-        ]}
-      />
+      <Highlight highlight={props.highlight} />
     </View>
   </ZoomedSlide>
 );
@@ -157,12 +184,7 @@ export const Slide2 = (props: any) => (
           debug={props.debug}
           transition={props.imageTransition}
         />
-        <View
-          style={[
-            StyleSheet.absoluteFill,
-            props.highlight ? { backgroundColor: Colors.yellow } : undefined
-          ]}
-        />
+        <Highlight highlight={props.highlight} />
       </View>
       <Column style={{ marginLeft: 40, alignItems: "flex-start" }}>
         <Heading2

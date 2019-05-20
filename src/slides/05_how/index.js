@@ -32,10 +32,15 @@ export default [
     <Slide1 />
     <Slide2 />
   </SlideZoomContainer>,
-  <SlideZoomContainer key={"how7"} title="Measure">
+  <SlideZoomContainer key={"how7"} title="Identify">
     <DummySlide />
     <Slide1 highlight />
     <Slide2 highlight />
+  </SlideZoomContainer>,
+  <SlideZoomContainer key={"how7.5"} title="Measure">
+    <DummySlide />
+    <Slide1 highlight="measure" />
+    <Slide2 highlight="measure" />
   </SlideZoomContainer>,
   <SlideZoomContainer key={"how8"} title="Hide target">
     <DummySlide />
@@ -49,20 +54,20 @@ export default [
   </SlideZoomContainer>,
   <SlideZoomContainer key={"how10"} title="Render clone">
     <DummySlide />
-    <Slide1 highlight />
+    <Slide1 highlight="clone" />
     <Slide2 hidden />
   </SlideZoomContainer>,
-  <SlideZoomContainer key={"how11"} title="Animate">
-    <Slide1 highlight />
-    <Slide2 highlight />
+  <SlideZoomContainer key={"how11"} title="Animate clone">
+    <Slide1 highlight="clone" />
+    <Slide2 highlight="clone" />
     <DummySlide />
   </SlideZoomContainer>,
   <SlideZoomContainer key={"how11.1"} title="Hide clone">
     <Slide1 />
-    <Slide2 highlight hidden />
+    <Slide2 highlight="clone" hidden />
     <DummySlide />
   </SlideZoomContainer>,
-  <SlideZoomContainer key={"how11.2"} title="Show target">
+  <SlideZoomContainer key={"how11.2"} title="Show original target">
     <Slide1 />
     <Slide2 />
     <DummySlide />
@@ -76,8 +81,8 @@ export default [
   <Slide key={"how14"}>
     <Code>{`
 
+// Add package & import
 import * as MagicMove from 'react-native-magic-move';
-
 
 
 // Wrap App in <MagicMove.Provider>

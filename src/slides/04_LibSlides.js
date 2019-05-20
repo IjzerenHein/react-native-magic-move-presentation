@@ -16,7 +16,7 @@ export default [
       margins
       transition={MagicMove.Transition.dissolve}
     >
-      But, it's hard to do
+      But, it's kinda tricky to do
     </Heading1>
     <List>
       <Heading2
@@ -52,21 +52,21 @@ export default [
     </Heading1>
     <List>
       <Heading2 id="listItem1" margins transition={MagicMove.Transition.flip.x}>
-        🐰 generic solution
+        🐰 standalone solution using overlays
       </Heading2>
       <Heading2
         id="listItem2"
         margins
         transition={MagicMove.Transition.dissolve}
       >
-        🎩 transition effects
+        ✨ react-navigation binding
       </Heading2>
       <Heading2
         id="listItem3"
         margins
         transition={MagicMove.Transition.dissolve}
       >
-        ✨ react-navigation
+        🎩 variety transition effects
       </Heading2>
       <Heading2 margins animation="fadeInUp">
         🏎️ optional native optimisations
