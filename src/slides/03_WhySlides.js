@@ -38,7 +38,7 @@ export default [
       <Column>
         <Heading1 id="meaning">Contextual meaning</Heading1>
         <Heading1 />
-        <Heading1 id="delight">Delightful</Heading1>
+        <Heading1 id="activity">Sense of activity</Heading1>
       </Column>
     </Row>
   </Slide>,
@@ -52,17 +52,10 @@ export default [
       <Column>
         <Heading1 id="meaning">Contextual meaning</Heading1>
         <Heading1 />
-        <Heading1 id="delight">Delightful</Heading1>
+        <Heading1 id="activity">Sense of activity</Heading1>
         <Heading1 />
-        <Heading1>Sense of activity</Heading1>
+        <Heading1 id="delight">Delight</Heading1>
       </Column>
     </Row>
-  </Slide>,
-  <Slide key="why4">
-    <Heading1 margins>But, it's hard to do</Heading1>
-    <List>
-      <Heading2 margins>💃 Router & view interplay</Heading2>
-      <Heading2 margins>🤯 Keep sanity writing views</Heading2>
-    </List>
   </Slide>
 ];

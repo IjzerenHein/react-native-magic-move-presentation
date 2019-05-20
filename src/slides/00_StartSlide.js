@@ -12,8 +12,8 @@ import {
 } from "../components";
 import * as MagicMove from "react-native-magic-move";
 
-export default () => (
-  <Slide>
+export default [
+  <Slide key="start0">
     <Caption style={{ alignSelf: "flex-end" }}>May 23, ReactEurope</Caption>
     <Column style={{ justifyContent: "flex-end" }}>
       <Heading1 id="presentation-title">react-native-magic-move</Heading1>
@@ -43,4 +43,4 @@ export default () => (
       </View>
     </Column>
   </Slide>
-);
+];

@@ -2,8 +2,8 @@
 import React from "react";
 import { Slide, Heading1, Caption, Image } from "../components";
 
-export default () => (
-  <Slide enabled showHeader>
+export default [
+  <Slide key="me0" enabled showHeader>
     <Image
       source={require("../assets/logo.png")}
       animation="fadeInUp"
@@ -12,4 +12,4 @@ export default () => (
     <Heading1 animation="fadeIn">Hein Rutjes</Heading1>
     <Caption animation="fadeIn">github/IjzerenHein</Caption>
   </Slide>
-);
+];

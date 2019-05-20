@@ -49,6 +49,7 @@ export interface TextProps extends Text.propTypes {
   light?: boolean;
   margins?: boolean;
   color?: string;
+  backColor?: string;
 }
 
 function createTextComponent(baseStyle: any) {
@@ -59,6 +60,7 @@ function createTextComponent(baseStyle: any) {
       animation,
       style,
       color,
+      backColor,
       margins,
       ...otherProps
     } = props;
@@ -66,6 +68,7 @@ function createTextComponent(baseStyle: any) {
     const fullStyle = [
       baseStyle,
       color ? { color } : undefined,
+      backColor ? { backgroundColor: backColor } : undefined,
       margins ? { marginBottom: 40 } : undefined,
       style
     ];

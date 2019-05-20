@@ -16,7 +16,7 @@ import {
 export default [
   // Slide 0
   <Slide key="image0">
-    <Heading2>Image stretching</Heading2>
+    <Heading1>Image transitions</Heading1>
     <Column>
       <Phone>
         <Flex />
@@ -35,7 +35,7 @@ export default [
   </Slide>,
   // Slide 1
   <Slide key="image1">
-    <Heading2>Image stretching</Heading2>
+    <Heading1>Image transitions</Heading1>
     <Column>
       <Phone>
         <Image
@@ -56,7 +56,7 @@ export default [
   // Scale, move & Dissolve
   ///////////////////////////////////////
   <Slide key="image2">
-    <Heading2>Dissolve effect</Heading2>
+    <Heading1>Image transitions</Heading1>
     <Column>
       <Phone>
         <Flex />
@@ -75,7 +75,7 @@ export default [
   </Slide>,
   // Slide 1
   <Slide key="image3">
-    <Heading2>Dissolve effect</Heading2>
+    <Heading1>Image transitions</Heading1>
     <Column>
       <Phone>
         <Image
@@ -96,7 +96,7 @@ export default [
   // Resize mode correction
   ///////////////////////////////////////
   <Slide key="image4">
-    <Heading2>Resize-mode correction</Heading2>
+    <Heading1>Image transitions</Heading1>
     <Column>
       <Phone>
         <Flex />
@@ -114,7 +114,7 @@ export default [
     </Column>
   </Slide>,
   <Slide key="image5">
-    <Heading2>Resize-mode correction</Heading2>
+    <Heading1>Image transitions</Heading1>
     <Column>
       <Phone>
         <Image
@@ -135,7 +135,7 @@ export default [
   // Border-radius correction
   ///////////////////////////////////////
   <Slide key="image6">
-    <Heading2>Border-radius correction</Heading2>
+    <Heading1>Image transitions</Heading1>
     <Column>
       <Phone>
         <Flex />
@@ -156,7 +156,7 @@ export default [
     </Column>
   </Slide>,
   <Slide key="image7">
-    <Heading2>Border-radius correction</Heading2>
+    <Heading1>Image transitions</Heading1>
     <Column>
       <Phone>
         <Image

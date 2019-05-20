@@ -7,7 +7,18 @@ import {
   Slide2,
   DummySlide
 } from "./components";
-import { Slide, Code, MagicMove } from "../../components";
+import {
+  Slide,
+  Code,
+  MagicMove,
+  Heading1,
+  Heading2,
+  Box,
+  Column,
+  Row,
+  Flex
+} from "../../components";
+import { Colors } from "../../styles";
 
 export default [
   <SlideContainer key={"how1"}>
@@ -57,10 +68,10 @@ export default [
     <DummySlide />
   </SlideZoomContainer>,
   <SlideContainer key={"how12"}>
-    <Slide1 imageEnabled />
+    <Slide1 imageEnabled titleEnabled />
   </SlideContainer>,
   <SlideContainer key={"how13"}>
-    <Slide2 imageEnabled titleEnabled />
+    <Slide2 imageEnabled titleEnabled textEnabled />
   </SlideContainer>,
   <Slide key={"how14"}>
     <Code>{`
@@ -73,6 +84,7 @@ import * as MagicMove from 'react-native-magic-move';
 // Provider draws overlay on top of your app
 <MagicMove.Provider>
   <App />
+  // overlay is rendered here
 </MagicMove.Provider>
 
 
@@ -88,86 +100,28 @@ import * as MagicMove from 'react-native-magic-move';
   <Slide key={"how15"}>
     <Code>{`
 
-
-// Replace image
+// Replace image & Text
 <Image
   style={styles.image}
   source={require('./relativity.jpg')} />
+<Text style={styles.heading1}>Relativity</Text>
 
 
-
-// With MagicMove.Image and provide shared "id"
+// With MagicMove prefix and provide shared "id"
 <MagicMove.Image
   id='relativityImage'
   style={styles.image}
   source={require('./relativity.jpg')} />
-
-
-
-// On both screens
-`}</Code>
-  </Slide>,
-  <SlideContainer key={"how14"}>
-    <Slide1 imageEnabled titleEnabled />
-  </SlideContainer>,
-  <SlideContainer key={"how15"}>
-    <Slide2 imageEnabled titleEnabled />
-  </SlideContainer>,
-  <Slide key={"how16"}>
-    <Code>{`
-
-
-
-// Replace text
-<Text style={styles.heading1} />
-
-
-
-
-// With MagicMove.Text and provide shared "id"
 <MagicMove.Text
   id='relativityTitle'
-  style={styles.heading1} />
-
+  style={styles.heading1}>
 
 
 // On both screens
 `}</Code>
   </Slide>,
-  <Slide key={"how17"}>
+  <Slide key={"how15.2"}>
     <Code>{`
-
-
-
-// Customize transition
-
-<MagicMove.{View|Image|Text}
-  id='sharedId'
-  transition={move|flip|morph|dissolve|etc..}
-  duration={400}
-  delay={0}
-  easing={Easing.inOut(Easing.ease)}
-  zIndex={0}
-  disabled={false}
-  debug={true} />
-
-`}</Code>
-  </Slide>,
-  <SlideContainer key={"how18.3"}>
-    <Slide1 imageEnabled titleEnabled debug />
-  </SlideContainer>,
-  <SlideContainer key={"how19"}>
-    <Slide2 imageEnabled titleEnabled debug />
-  </SlideContainer>,
-  <SlideContainer key={"how21"}>
-    <Slide1 imageEnabled titleEnabled textEnabled />
-  </SlideContainer>,
-  <SlideContainer key={"how22"}>
-    <Slide2 imageEnabled titleEnabled textEnabled />
-  </SlideContainer>,
-  <Slide key={"how20"}>
-    <Code>{`
-
 
 // Use animatable to show enter animations
 import * as Animatable from 'react-native-animatable';
@@ -188,5 +142,254 @@ import * as Animatable from 'react-native-animatable';
 </Animatable.Text>
 
 `}</Code>
+  </Slide>,
+
+  <Slide key={"how16"}>
+    <Code>{`
+
+// Props
+<MagicMove.{View|Image|Text|...}
+  id='sharedId'
+  transition={MagicMove.Transition.move}
+  duration={400}
+  delay={0}
+  easing={Easing.inOut(Easing.ease)}
+  zIndex={0}
+  disabled={false}
+  debug={true}
+  ... />
+
+// Transitions
+MagicMove.Transition.{
+  move | morph | dissolve | flip
+  shrinkAndGrow |squashAndStretch
+}
+// or create your own
+
+`}</Code>
+  </Slide>,
+  <Slide key="how17.1">
+    <Heading1 id="title" margins>
+      Transitions
+    </Heading1>
+    <Heading2 id="move">Move</Heading2>
+    <Heading2 id="morph">Morph</Heading2>
+    <Heading2 id="dissolve">Dissolve</Heading2>
+    <Heading2 id="flip">Flip X/Y</Heading2>
+    <Heading2 id="squash">Squash & Stretch</Heading2>
+    <Heading2 id="shrink">Shrink & Grow</Heading2>
+    <Heading2 id="custom">custom</Heading2>
+  </Slide>,
+  <Slide key="how17.2">
+    <Heading1 id="title" margins>
+      Transitions
+    </Heading1>
+    <Row>
+      <Row>
+        <Heading2 id="move">Move</Heading2>
+      </Row>
+      <Row>
+        <Box id="moveObject" size="small" color={Colors.blue} />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="morph">Morph</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="morphObject"
+          size="small"
+          color={Colors.yellow}
+          transition={MagicMove.Transition.morph}
+        />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="dissolve">Dissolve</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="dissolveObject"
+          size="small"
+          color={Colors.green}
+          transition={MagicMove.Transition.dissolve}
+        />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="flip">Flip X/Y</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="flipObject"
+          size="small"
+          color={Colors.pink}
+          transition={MagicMove.Transition.flip.y}
+        />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="squash">Squash & Stretch</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="squashObject"
+          size="small"
+          color={Colors.red}
+          transition={MagicMove.Transition.squashAndStretch}
+        />
+      </Row>
+      <Row />
+    </Row>
+  </Slide>,
+  <Slide key="how17.3">
+    <Heading1 margins>Transitions</Heading1>
+    <Row>
+      <Row>
+        <Heading2 id="move">Move</Heading2>
+      </Row>
+      <Row />
+      <Row>
+        <Box id="moveObject" size="large" color={Colors.blue} />
+      </Row>
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="morph">Morph</Heading2>
+      </Row>
+      <Row />
+      <Row>
+        <Box
+          id="morphObject"
+          size="round"
+          color={Colors.pink}
+          transition={MagicMove.Transition.morph}
+        />
+      </Row>
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="dissolve">Dissolve</Heading2>
+      </Row>
+      <Row />
+      <Row>
+        <Box
+          id="dissolveObject"
+          size="large"
+          color={Colors.yellow}
+          transition={MagicMove.Transition.dissolve}
+        />
+      </Row>
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="flip">Flip X/Y</Heading2>
+      </Row>
+      <Row />
+      <Row>
+        <Box
+          id="flipObject"
+          size="large"
+          color={Colors.green}
+          transition={MagicMove.Transition.flip.x}
+        />
+      </Row>
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="squash">Squash & Stretch</Heading2>
+      </Row>
+      <Row />
+      <Row>
+        <Box
+          id="squashObject"
+          size="large"
+          color={Colors.red}
+          transition={MagicMove.Transition.squashAndStretch}
+        />
+      </Row>
+    </Row>
+  </Slide>,
+  <Slide key="how17.4">
+    <Heading1 id="title" margins>
+      Transitions
+    </Heading1>
+    <Row>
+      <Row>
+        <Heading2 id="move">Move</Heading2>
+      </Row>
+      <Row>
+        <Box id="moveObject" size="small" color={Colors.blue} debug />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="morph">Morph</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="morphObject"
+          size="small"
+          color={Colors.yellow}
+          transition={MagicMove.Transition.morph}
+          debug
+        />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="dissolve">Dissolve</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="dissolveObject"
+          size="small"
+          color={Colors.green}
+          transition={MagicMove.Transition.dissolve}
+          debug
+        />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="flip">Flip X/Y</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="flipObject"
+          size="small"
+          color={Colors.pink}
+          transition={MagicMove.Transition.flip.y}
+          debug
+        />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="squash">Squash & Stretch</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="squashObject"
+          size="small"
+          color={Colors.red}
+          transition={MagicMove.Transition.squashAndStretch}
+          debug
+        />
+      </Row>
+      <Row />
+    </Row>
   </Slide>
 ];
