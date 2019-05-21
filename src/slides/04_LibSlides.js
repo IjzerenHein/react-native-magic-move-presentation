@@ -52,7 +52,7 @@ export default [
     </Heading1>
     <List>
       <Heading2 id="listItem1" margins transition={MagicMove.Transition.flip.x}>
-        🐰 standalone solution using overlays
+        🐰 Standalone solution using overlayed clones
       </Heading2>
       <Heading2
         id="listItem2"
@@ -66,10 +66,10 @@ export default [
         margins
         transition={MagicMove.Transition.dissolve}
       >
-        🎩 variety transition effects
+        🎩 Variety transition effects
       </Heading2>
       <Heading2 margins animation="fadeInUp">
-        🏎️ optional native optimisations
+        🏎️ Optional native optimisations
       </Heading2>
     </List>
   </Slide>,

@@ -24,7 +24,7 @@ export default [
         />
       </MagicMove.View>
       <Column>
-        <Heading1 id="meaning">Contextual meaning</Heading1>
+        <Heading1 id="meaning">Communicate context</Heading1>
       </Column>
     </Row>
   </Slide>,
@@ -36,7 +36,7 @@ export default [
         style={{ width: 400, height: 600 }}
       />
       <Column>
-        <Heading1 id="meaning">Contextual meaning</Heading1>
+        <Heading1 id="meaning">Communicate context</Heading1>
         <Heading1 />
         <Heading1 id="activity">Sense of activity</Heading1>
       </Column>
@@ -50,7 +50,7 @@ export default [
         style={{ width: 400, height: 600 }}
       />
       <Column>
-        <Heading1 id="meaning">Contextual meaning</Heading1>
+        <Heading1 id="meaning">Communicate context</Heading1>
         <Heading1 />
         <Heading1 id="activity">Sense of activity</Heading1>
         <Heading1 />

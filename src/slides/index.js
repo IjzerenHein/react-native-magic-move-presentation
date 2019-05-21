@@ -11,11 +11,11 @@ import nextSlides from "./08_WhatsNextSlides";
 import finalSlides from "./09_FinalSlides";
 
 export default [
-  /*...startSlides,
+  ...startSlides,
   ...meSlides,
   ...whatSlides,
   ...whySlides,
-  ...libSlides,*/
+  ...libSlides,
   ...howSlides,
   ...imageSlides,
   ...nextSlides,
