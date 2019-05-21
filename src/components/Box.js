@@ -38,6 +38,7 @@ export class Box extends Component<any> {
           size ? styles[`${size}Size`] : undefined,
           style
         ]}
+        useNativeClone={false}
         {...otherProps}
       />
     );
