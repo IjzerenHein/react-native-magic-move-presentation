@@ -39,6 +39,8 @@ export class Presentation extends Component<PropsType, StateType> {
   state = {
     slideIndex: 0
   };
+  _keyboardString = "";
+  _timer = undefined;
 
   componentDidMount() {
     const keyEventEmitter = new NativeEventEmitter(
@@ -52,8 +54,31 @@ export class Presentation extends Component<PropsType, StateType> {
         case "RightArrow":
           this.onPressNext();
           break;
+        default:
+          this.onAddKeyPress(event);
+          break;
       }
     });
+  }
+
+  onAddKeyPress(key: string) {
+    this._keyboardString = this._keyboardString + key;
+    if (this._timer) {
+      clearTimeout(this._timer);
+    }
+    this._timer = setTimeout(() => {
+      this._timer = undefined;
+      let index = parseInt(this._keyboardString);
+      if (index >= React.Children.count(this.props.children)) {
+        index = React.Children.count(this.props.children) - 1;
+      }
+      this._keyboardString = "";
+      if (index >= 0) {
+        this.setState({
+          slideIndex: index
+        });
+      }
+    }, 500);
   }
 
   render() {
