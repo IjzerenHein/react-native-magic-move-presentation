@@ -12,6 +12,7 @@ import {
   sourceScaleTransition,
   MagicMove
 } from "../components";
+import Video from "react-native-video";
 
 export default [
   // Slide 0
@@ -172,5 +173,14 @@ export default [
         <Flex />
       </Phone>
     </Column>
+  </Slide>,
+  <Slide key="image8">
+    <Video
+      source={require("../assets/vickyparking.mp4")}
+      repeat
+      style={{ width: 324, height: 700 }}
+    />
   </Slide>
 ];
+
+// 828 × 1792
