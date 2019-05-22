@@ -23,7 +23,7 @@ const Li = (props: any) => {
   if (highlight) {
     return <Heading1 margins {...otherProps} />;
   } else {
-    return <Heading2 margins style={styles.light} {...otherProps} />;
+    return <Heading2 margins {...otherProps} />;
   }
 };
 
@@ -32,48 +32,10 @@ export default [
     <Heading1 id="whatsnext">What's next</Heading1>
     <Heading1 />
     <List>
-      <Li id="sync" highlight>
-        👯‍♀️Synchronized animations
-      </Li>
-      <Li id="gesture">👋 Gesture tracking</Li>
+      <Li id="sync">👯‍♀️Synchronized transitions</Li>
       <Li id="enter">🛷 Enter / leave animations</Li>
-      <Li id="glitch">🐞 Glitch free</Li>
-    </List>
-  </Slide>,
-  <Slide key="next2">
-    <Heading1 id="whatsnext">What's next</Heading1>
-    <Heading1 />
-    <List>
-      <Li id="sync">👯‍♀️Synchronized animations</Li>
-      <Li id="gesture" highlight>
-        👋 Gesture tracking
-      </Li>
-      <Li id="enter">🛷 Enter / leave animations</Li>
-      <Li id="glitch">🐞 Glitch free</Li>
-    </List>
-  </Slide>,
-  <Slide key="next3">
-    <Heading1 id="whatsnext">What's next</Heading1>
-    <Heading1 />
-    <List>
-      <Li id="sync">👯‍♀️Synchronized animations</Li>
-      <Li id="gesture">👋 Gesture tracking</Li>
-      <Li id="enter" highlight>
-        🛷 Enter / leave animations
-      </Li>
-      <Li id="glitch">🐞 Glitch free</Li>
-    </List>
-  </Slide>,
-  <Slide key="next4">
-    <Heading1 id="whatsnext">What's next</Heading1>
-    <Heading1 />
-    <List>
-      <Li id="sync">👯‍♀️Synchronized animations</Li>
-      <Li id="gesture">👋 Gesture tracking</Li>
-      <Li id="enter">🛷 Enter / leave animations</Li>
-      <Li id="glitch" highlight>
-        🐞 Glitch free
-      </Li>
+      <Li id="scene">🔍 Scene effects</Li>
+      <Li id="glitch">🧡 Optimisations</Li>
     </List>
   </Slide>
 ];

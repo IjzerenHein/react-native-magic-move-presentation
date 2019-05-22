@@ -16,7 +16,7 @@ export default [
       margins
       transition={MagicMove.Transition.dissolve}
     >
-      But, it's kinda tricky to do
+      Challenges
     </Heading1>
     <List>
       <Heading2
@@ -24,21 +24,21 @@ export default [
         margins
         transition={MagicMove.Transition.dissolve}
       >
-        💃 Complex router & view interplay
+        💃 Router & view interplay
       </Heading2>
       <Heading2
         id="listItem2"
         margins
         transition={MagicMove.Transition.dissolve}
       >
-        ⏰ Timing sensitive
+        🍕 Shared element ownership
       </Heading2>
       <Heading2
         id="listItem3"
         margins
         transition={MagicMove.Transition.dissolve}
       >
-        🤯 Keep sanity writing views
+        ⛵️ Seamless transitions
       </Heading2>
     </List>
   </Slide>,
@@ -52,24 +52,24 @@ export default [
     </Heading1>
     <List>
       <Heading2 id="listItem1" margins transition={MagicMove.Transition.flip.x}>
-        🐰 Standalone solution using overlayed clones
+        🐰 Standalone solution using clones
       </Heading2>
       <Heading2
         id="listItem2"
         margins
         transition={MagicMove.Transition.dissolve}
       >
-        ✨ react-navigation binding
+        🎩 Variety transition effects
       </Heading2>
       <Heading2
         id="listItem3"
         margins
         transition={MagicMove.Transition.dissolve}
       >
-        🎩 Variety transition effects
-      </Heading2>
-      <Heading2 margins animation="fadeInUp">
         🏎️ Optional native optimisations
+      </Heading2>
+      <Heading2 animation="fadeInUp" margins>
+        ✨ react-navigation binding
       </Heading2>
     </List>
   </Slide>,

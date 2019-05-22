@@ -31,14 +31,4 @@ export default [
       />
     </MagicMove.View>
   </Slide>
-  /*<Slide key="what3">
-    <MagicMove.View id="video1">
-      <Video
-        source={require("../assets/ContactsAnim.mp4")}
-        repeat
-        paused
-        style={{ width: 400, height: 600 }}
-      />
-    </MagicMove.View>
-  </Slide>*/
 ];

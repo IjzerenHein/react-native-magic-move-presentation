@@ -38,23 +38,7 @@ export default [
       <Column>
         <Heading1 id="meaning">Communicate context</Heading1>
         <Heading1 />
-        <Heading1 id="activity">Sense of activity</Heading1>
-      </Column>
-    </Row>
-  </Slide>,
-  <Slide key="why3">
-    <Row>
-      <Video
-        source={require("../assets/ContactsAnim.mp4")}
-        repeat
-        style={{ width: 400, height: 600 }}
-      />
-      <Column>
-        <Heading1 id="meaning">Communicate context</Heading1>
-        <Heading1 />
-        <Heading1 id="activity">Sense of activity</Heading1>
-        <Heading1 />
-        <Heading1 id="delight">Delight</Heading1>
+        <Heading1 animation="fadeInUp">Sense of delight</Heading1>
       </Column>
     </Row>
   </Slide>

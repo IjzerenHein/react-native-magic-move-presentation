@@ -78,6 +78,7 @@ function createTextComponent(baseStyle: any) {
         <MagicMove.Text
           id={id}
           style={fullStyle}
+          useNativeClone={false}
           {...TransitionProps}
           {...otherProps}
         >

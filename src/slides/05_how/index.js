@@ -19,6 +19,7 @@ import {
   Flex
 } from "../../components";
 import { Colors } from "../../styles";
+import experimentalTransition from "./experimentalTransition";
 
 export default [
   <SlideContainer key={"how1"}>
@@ -164,12 +165,12 @@ import * as Animatable from 'react-native-animatable';
   debug={true}
   ... />
 
-// Transitions
-MagicMove.Transition.{
-  move | morph | dissolve | flip
-  shrinkAndGrow |squashAndStretch
-}
-// or create your own
+// Create custom components
+const MMFastImage = MagicMove.createMagicMoveComponent(
+  FastImage, {
+    ComponentType: 'image'
+  }
+);  
 
 `}</Code>
   </Slide>,
@@ -182,8 +183,10 @@ MagicMove.Transition.{
     <Heading2 id="dissolve">Dissolve</Heading2>
     <Heading2 id="flip">Flip X/Y</Heading2>
     <Heading2 id="squash">Squash & Stretch</Heading2>
-    <Heading2 id="shrink">Shrink & Grow</Heading2>
-    <Heading2 id="custom">custom</Heading2>
+    <Heading2 id="shrink" margins>
+      Shrink & Grow
+    </Heading2>
+    <Heading2 id="custom">or create your own..</Heading2>
   </Slide>,
   <Slide key="how17.2">
     <Heading1 id="title" margins>
@@ -254,6 +257,21 @@ MagicMove.Transition.{
       </Row>
       <Row />
     </Row>
+    <Row>
+      <Row>
+        <Heading2 id="exprimental">Experimental</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="experimentalObject"
+          size="small"
+          color={Colors.orange}
+          transition={experimentalTransition}
+          useNativeClone
+        />
+      </Row>
+      <Row />
+    </Row>
   </Slide>,
   <Slide key="how17.3">
     <Heading1 margins>Transitions</Heading1>
@@ -288,7 +306,7 @@ MagicMove.Transition.{
       <Row>
         <Box
           id="dissolveObject"
-          size="large"
+          size="round"
           color={Colors.yellow}
           transition={MagicMove.Transition.dissolve}
         />
@@ -322,10 +340,25 @@ MagicMove.Transition.{
         />
       </Row>
     </Row>
+    <Row>
+      <Row>
+        <Heading2 id="exprimental">Experimental</Heading2>
+      </Row>
+      <Row />
+      <Row>
+        <Box
+          id="experimentalObject"
+          size="large"
+          color={Colors.orange}
+          transition={experimentalTransition}
+          useNativeClone
+        />
+      </Row>
+    </Row>
   </Slide>,
   <Slide key="how17.4">
     <Heading1 id="title" margins>
-      Transitions
+      debug = true
     </Heading1>
     <Row>
       <Row>
@@ -391,6 +424,22 @@ MagicMove.Transition.{
           size="small"
           color={Colors.red}
           transition={MagicMove.Transition.squashAndStretch}
+          debug
+        />
+      </Row>
+      <Row />
+    </Row>
+    <Row>
+      <Row>
+        <Heading2 id="exprimental">Experimental</Heading2>
+      </Row>
+      <Row>
+        <Box
+          id="experimentalObject"
+          size="small"
+          color={Colors.orange}
+          transition={experimentalTransition}
+          useNativeClone
           debug
         />
       </Row>
