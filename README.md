@@ -12,3 +12,5 @@ Presentation App/Slides for the [react-native-magic-move](https://github.com/Ijz
 
 - Use `arrow` keys to navigate to next or previous slide
 - Type in slide-number (e.g `12`) to navigate to that slide
+
+> Disclaimer, don't switch the slides to quickly though, the app might break (@ijzerenhein todo fix this)
