@@ -7,3 +7,8 @@ Presentation slides about [react-native-magic-move](https://github.com/IjzerenHe
 - Clone this repo
 - `yarn install`
 - `yarn ios`
+
+## How to navigate
+
+- Use `arrow` keys to navigate to next or previous slide
+- Type in slide-number (e.g "12") to navigate to that slide
