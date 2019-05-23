@@ -8,9 +8,9 @@ import {
   List,
   Row,
   Flex,
-  MagicMove,
-  sourceScaleTransition
+  MagicMove
 } from "../components";
+import { sourceScaleTransition } from "../transitions";
 import Video from "react-native-video";
 
 export default [

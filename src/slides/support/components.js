@@ -150,6 +150,7 @@ export const Slide1 = (props: any) => (
   <ZoomedSlide {...props} id="howslide1">
     <Heading1
       margins
+      // $FlowFixMe
       id={props.titleEnabled ? "relativityTitle" : undefined}
       debug={props.debug}
     >
@@ -157,6 +158,7 @@ export const Slide1 = (props: any) => (
     </Heading1>
     <View style={{ width: 500, height: 500 }}>
       <Image
+        // $FlowFixMe
         id={props.imageEnabled ? "relativity" : undefined}
         //useNativeClone={false}
         //parentScaleHint={ZOOM}
@@ -176,6 +178,7 @@ export const Slide2 = (props: any) => (
     <Row style={{ alignItems: "flex-start", margin: 40 }}>
       <View style={{ width: 200, height: 200 }}>
         <Image
+          // $FlowFixMe
           id={props.imageEnabled ? "relativity" : undefined}
           source={require("../../assets/relativity.jpg")}
           style={{ width: 200, height: 200, opacity: props.hidden ? 0 : 1 }}
@@ -188,6 +191,7 @@ export const Slide2 = (props: any) => (
       </View>
       <Column style={{ marginLeft: 40, alignItems: "flex-start" }}>
         <Heading2
+          // $FlowFixMe
           id={props.titleEnabled ? "relativityTitle" : undefined}
           debug={props.debug}
         >

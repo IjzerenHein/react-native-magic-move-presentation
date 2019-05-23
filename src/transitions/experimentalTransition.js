@@ -1,3 +1,5 @@
+// @flow
+
 /* eslint react/prop-types: 0 */
 import { Animated } from "react-native";
 
@@ -6,12 +8,8 @@ function resolveValue(value, def) {
   return def || 0;
 }
 
-export default function experimentalTransition({
-  from,
-  to,
-  render,
-  interpolate
-}) {
+// $FlowFixMe
+export function experimentalTransition({ from, to, render, interpolate }) {
   const colCount = 3;
   const rowCount = 3;
 

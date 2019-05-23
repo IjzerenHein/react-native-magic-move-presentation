@@ -6,7 +6,7 @@ import {
   Slide1,
   Slide2,
   DummySlide
-} from "./components";
+} from "./support/components";
 import {
   Slide,
   Code,
@@ -17,9 +17,9 @@ import {
   Column,
   Row,
   Flex
-} from "../../components";
-import { Colors } from "../../styles";
-import experimentalTransition from "./experimentalTransition";
+} from "../components";
+import { Colors } from "../styles";
+import { experimentalTransition } from "../transitions";
 
 export default [
   <SlideContainer key={"how1"}>

@@ -19,6 +19,7 @@ function resolveValue(value, def) {
  * because the shape of the components affects how the image
  * is cropped and positioned within the component.
  */
+// $FlowFixMe
 export function sourceScaleTransition({ from, to, interpolate, render }) {
   const moveTarget = false;
 

@@ -9,9 +9,9 @@ import {
   Column,
   Flex,
   Phone,
-  sourceScaleTransition,
   MagicMove
 } from "../components";
+import { sourceScaleTransition } from "../transitions";
 import Video from "react-native-video";
 
 export default [

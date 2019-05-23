@@ -8,7 +8,6 @@ export * from "./Layout";
 export * from "./Image";
 export * from "./Animation";
 export * from "./Phone";
-export * from "./sourceScaleTransition";
 
 import * as MagicMove from "react-native-magic-move";
 export { MagicMove };
